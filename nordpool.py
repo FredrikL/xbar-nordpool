@@ -43,8 +43,8 @@ def get_hour(rows, hour):
   price = atof(value)
   return price /10
 
-def show_comming_prices(rows, current_hour):
-    for x in range(1, 4):
+def show_future_prices(rows, current_hour):
+    for x in range(1, 5):
       hour = current_hour +x
       if hour <= 23:
         kwh = get_hour(rows, hour)
@@ -64,4 +64,4 @@ kwh = get_hour(rows, current)
 print(f'⚡ {kwh:.2f} öre/kWh')
 print('---')
 
-show_comming_prices(rows, current)
+show_future_prices(rows, current)
